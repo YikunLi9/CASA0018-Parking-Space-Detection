@@ -1,23 +1,74 @@
-# DL4SN Assessment Submission Guidelines
+# Parking Lot Monitor
 
-This folder contains an outline of the content we want you to submit for your final assessment. It should have 2 main parts:
+This project focuses on improving urban parking management by developing a machine-learning-based system to identify real-time occupancy status of parking spaces.
 
-- a report folder containing a report in Markdown written using the template provided
-- a projects folder showing the various projects and experiments you have built during the module
+## Network Architecture
 
-The assessment on this module has 3 component parts: 
-1. the physical project build (what and how the device senses, choice of approach, quality of data) 
-2. the project presentation (narrative, critical analysis and synthesis of learning, clarity of presentation)
-3. the project documentation (context, results, reflection)
+The model uses a CNN architecture which processes images to classify parking space occupancy. It includes 3 convolution layers and 3 pooling layers to extract and learn features from the input images, with dropout layers to prevent overfitting.
 
-This repository acts as the basis for documenting all three of those deliverables but mostly the third item in the list.
+![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\architecture.png)
 
-## Report Folder
-The template provides the structure of the information we want you to capture to describe your project. We want you to complete this report in Markdown to get into the habit of documenting your work on GitHub. 
 
-When the report is finished you should export to PDF using an extension of your choice - for example in VSCode we use the handy MarkdownPDF extension. When the PDF has been created, upload that to Moodle for assessment.
 
-## Projects Folder
-Your 'Final Project' is the one that you will present at the end of the module and your repository for the project should contain all code and assets used. It is important to document these resources so that other people can understand what is in your repository and replicate your project. 
+## Data
 
-Whilst the main folder in Projects will be 'Final Project' we encourage you to add in other folders in the space to store any other experimentation you have done during the module - for example, projects from the tutorials. 
+The primary dataset used is the PKLot dataset from ufpr, which includes over 12,000 images of parking lots annotated with occupancy status under different weather conditions. 
+
+This is a sample:
+
+![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\data_sample.png)
+
+You can find full dataset here: [Parking Lot Database – Laboratório Visão Robótica e Imagem (ufpr.br)](https://web.inf.ufpr.br/vri/databases/parking-lot-database/)
+
+
+
+### System Workflow
+
+1. **Data Collection**: Utilizes the PKLot dataset with images under various weather conditions for training the model.
+2. **Model Development**: Trains a CNN to differentiate between occupied and unoccupied parking spaces. The model adjusts parameters through iterative training.
+3. **Deployment**: Uses a Raspberry Pi 4B with an external camera to monitor parking lots and update occupancy status via an MQTT server.
+
+![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\application_diagram.png)
+
+![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\workflow.png)
+
+## Closure
+
+![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi1.jpg)
+
+![raspi2](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi2.jpg)
+
+This is a really really good Raspberry Pi 4B case with camera mount, you can get it here:
+[Raspberry Pi 4 Camera Case by bkahan - Thingiverse](https://www.thingiverse.com/thing:4555651)
+
+The models are also contained in the project folder.
+
+
+
+## Quick Start
+
+Firstly, clone this repo from github:
+```
+git clone https://github.com/YikunLi9/CASA0018-Parking-Space-Detection.git
+```
+
+If you want  to test the model I trained, please:
+```
+cd ./Projects/Final Project
+python3 ./model_test.py
+```
+
+Or, if you want to train your own model, please prepare your dataset and divide them into training and validation set in folder with name 1 and 0 and try my notebook, I prefer Jupyter Notebook, or you can also use colab or other tools:
+
+```
+cd ./Projects/Final Project
+Jupyter-Notebook
+```
+
+
+
+## Contact
+
+If you have any question about the project or want to contribute to it, welcome to contact with me:
+
+yikun.li.22@ucl.ac.uk
