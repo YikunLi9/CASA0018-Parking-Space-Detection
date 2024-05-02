@@ -6,7 +6,7 @@ This project focuses on improving urban parking management by developing a machi
 
 The model uses a CNN architecture which processes images to classify parking space occupancy. It includes 3 convolution layers and 3 pooling layers to extract and learn features from the input images, with dropout layers to prevent overfitting.
 
-![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\architecture.png)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\architecture.png" />
 
 
 
@@ -16,7 +16,7 @@ The primary dataset used is the PKLot dataset from ufpr, which includes over 12,
 
 This is a sample:
 
-![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\data_sample.png)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\data_sample.png" />
 
 You can find full dataset here: [Parking Lot Database – Laboratório Visão Robótica e Imagem (ufpr.br)](https://web.inf.ufpr.br/vri/databases/parking-lot-database/)
 
@@ -28,15 +28,15 @@ You can find full dataset here: [Parking Lot Database – Laboratório Visão Ro
 2. **Model Development**: Trains a CNN to differentiate between occupied and unoccupied parking spaces. The model adjusts parameters through iterative training.
 3. **Deployment**: Uses a Raspberry Pi 4B with an external camera to monitor parking lots and update occupancy status via an MQTT server.
 
-![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\application_diagram.png)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\application_diagram.png" />
 
-![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\workflow.png)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\workflow.png" />
 
 ## Closure
 
-![](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi1.jpg)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi1.jpg" />
 
-![raspi2](D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi2.jpg)
+<img src="D:\UCL\CASA0018\CASA0018-Parking-Space-Detection\Report\diagrams\raspi2.jpg" alt="raspi2" />
 
 This is a really really good Raspberry Pi 4B case with camera mount, you can get it here:
 [Raspberry Pi 4 Camera Case by bkahan - Thingiverse](https://www.thingiverse.com/thing:4555651)
